@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input id="output" type="text" placeholder="0">
+            <button onclick="cleare()">clear</button>
+            <button onclick="delet()">dl</button>
+            <button onclick="display('%')">%</button>
+            <button onclick="display('/')">/</button>
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="display('*')">*</button>
+            <button onclick="display('4')">4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="display('-')">-</button>
+            <button onclick="display('1')">1</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="display('+')">+</button>
+            <button onclick="display('.')">.</button>
+            <button onclick="display('4')">4</button>
+            <button onclick="equal()" class="eq">=</button>
+
+        </div>
+    </div>
+    <p>created by: deepan raja</p>
+
+    <script src="cal.js">
+        let output_screen= document.getElementById("output");
+function display(){
+    output_screen.value +=num
+
+}
+function equal(){
+      try{
+        output_screen.value= eval(output_screen.value);
+      }
+      catch{
+        alert("solamudiyathu")
+      }
+}
+function delet(){
+  output_screen.value = output_screen.value.slice(0,-1)
+}
+function cleare(){
+    output_screen.value="";
+}
+    </script>
+</body>
+</html>
